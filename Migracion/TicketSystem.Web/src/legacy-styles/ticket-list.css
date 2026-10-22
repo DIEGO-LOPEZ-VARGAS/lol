@@ -1,0 +1,49 @@
+
+        /* SOLUCIÓN: Indicadores de estado circulares */
+.status-indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 8px;
+    border: 2px solid transparent;
+    transition: var(--transition);
+}
+
+/* Colores específicos para cada estado */
+.status-activo {
+    background-color: #28a745;
+    border-color: #1e7e34;
+}
+
+.status-pendiente {
+    background-color: var(--accent-yellow);
+    border-color: #e0a800;
+}
+
+.status-resuelto {
+    background-color: #17a2b8;
+    border-color: #138496;
+}
+   
+    .star {
+        font-size: 2rem;
+        color: #ccc;
+        cursor: pointer;
+    }
+    .star.selected{
+        color: gold;
+    }
+
+
+
+.status-cancelado {
+    background-color: #dc3545;
+    border-color: #c82333;
+}
+
+.status-en-proceso {
+    background-color: var(--primary-purple);
+    border-color: #6a0e42;
+}
+    

@@ -1,0 +1,253 @@
+
+        :root {
+            --amarillo: #fec526;
+            --azul: #0f1d60;
+            --rojo: #801250;
+            --blanco: #ffffff;
+            --gris-claro: #f5f7fa;
+            --gris-borde: #e1e5eb;
+        }
+        
+        body {
+            background-color: var(--gris-claro);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+        }
+        
+        .profile-title {
+            color: var(--azul);
+            font-weight: 600;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--amarillo);
+        }
+        
+        .stat-card {
+            background-color: var(--blanco);
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+            margin-bottom: 15px;
+            border: none;
+            color: #333;
+        }
+        
+        .stat-card:hover {
+            transform: translateY(-3px);
+        }
+        
+        .stat-card.tickets {
+            border-left: 4px solid var(--amarillo);
+        }
+        
+        .stat-card.users {
+            border-left: 4px solid var(--azul);
+        }
+        
+        .stat-card.areas {
+            border-left: 4px solid var(--rojo);
+        }
+        
+        .stat-card.assigned {
+            border-left: 4px solid #28a745;
+        }
+        
+        .stat-card.unassigned {
+            border-left: 4px solid #6c757d;
+        }
+        
+        .stat-value {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #333;
+        }
+        
+        .chart-container {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            padding: 20px;
+            border: none;
+            margin-bottom: 20px;
+        }
+        
+        .tickets-list-container {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            padding: 20px;
+            margin-top: 20px;
+        }
+        
+        .ticket-item {
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            background-color: white;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+            border: 1px solid var(--gris-borde);
+        }
+        
+        .ticket-item:hover {
+            background-color: rgba(0, 0, 0, 0.02);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transform: translateY(-2px);
+        }
+        
+        .ticket-id {
+            font-weight: 700;
+            color: var(--azul);
+            width: 80px;
+            flex-shrink: 0;
+        }
+        
+        .ticket-priority {
+            width: 100px;
+            flex-shrink: 0;
+            text-align: center;
+        }
+        
+        .ticket-content {
+            flex-grow: 1;
+            padding: 0 15px;
+        }
+        
+        .ticket-title {
+            font-weight: 600;
+            margin-bottom: 3px;
+            color: #333;
+        }
+        
+        .ticket-desc {
+            color: #666;
+            font-size: 0.9rem;
+            display: -webkit-box;
+            line-clamp: 1;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        
+        .ticket-status {
+            width: 120px;
+            flex-shrink: 0;
+            text-align: center;
+        }
+        
+        .ticket-date {
+            width: 100px;
+            flex-shrink: 0;
+            text-align: right;
+            color: #888;
+            font-size: 0.85rem;
+        }
+        
+        .priority-badge {
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-weight: 600;
+            font-size: 0.75rem;
+            display: inline-block;
+        }
+        
+        .priority-high {
+            background-color: rgba(220, 53, 69, 0.1);
+            color: #dc3545;
+        }
+        
+        .priority-medium {
+            background-color: rgba(254, 197, 38, 0.1);
+            color: #b58d1a;
+        }
+        
+        .priority-low {
+            background-color: rgba(23, 162, 184, 0.1);
+            color: #17a2b8;
+        }
+        
+        .status-badge {
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-weight: 600;
+            font-size: 0.75rem;
+            display: inline-block;
+        }
+        
+        .status-open {
+            background-color: rgba(0, 123, 255, 0.1);
+            color: #007bff;
+        }
+        
+        .status-closed {
+            background-color: rgba(40, 167, 69, 0.1);
+            color: #28a745;
+        }
+        
+        .status-pending {
+            background-color: rgba(255, 193, 7, 0.1);
+            color: #d4a100;
+        }
+        
+        .status-cancelled {
+            background-color: rgba(108, 117, 125, 0.1);
+            color: #6c757d;
+        }
+        
+        .status-activo {
+            background-color: rgba(0, 123, 255, 0.1);
+            color: #007bff;
+        }
+
+        .status-enproceso {
+            background-color: rgba(23, 162, 184, 0.1);
+            color: #17a2b8;
+        }
+
+        .status-resuelto {
+            background-color: rgba(40, 167, 69, 0.1);
+            color: #28a745;
+        }
+
+
+        .section-title {
+            color: var(--azul);
+            font-weight: 600;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .section-title i {
+            margin-right: 10px;
+            color: var(--amarillo);
+        }
+        
+        .action-btn {
+            background-color: var(--amarillo);
+            color: var(--azul);
+            border: none;
+            padding: 8px 15px;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: all 0.3s;
+            margin-top: 15px;
+        }
+        
+        .action-btn:hover {
+            background-color: #e6b422;
+            color: var(--azul);
+            transform: translateY(-2px);
+        }
+        .chart-container {
+            height: 500px;
+        }
+
+        @media screen and (min-width: 1920px) {
+            .chart-container {
+                height: 700px !important;
+            }
+        }
+    

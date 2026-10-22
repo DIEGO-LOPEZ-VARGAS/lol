@@ -1,0 +1,33 @@
+# Visual Studio
+.vs/
+**/.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# .NET build outputs
+**/bin/
+**/obj/
+**/publish/
+
+# Angular / Node build outputs and local dependencies
+**/node_modules/
+**/.angular/
+**/dist/
+npm-debug.log*
+
+# Local configuration and generated evidence
+**/appsettings.json
+**/appsettings.*.json
+!**/appsettings.example.json
+**/launchSettings.json
+Migracion/TicketSystem.Api/wwwroot/Evidencias/*
+!Migracion/TicketSystem.Api/wwwroot/Evidencias/.gitkeep
+
+# Archived legacy code and database exports may contain credentials or private ticket data
+info/Original/
+info/Database/
+**/*.bak
+**/*.mdf
+**/*.ldf

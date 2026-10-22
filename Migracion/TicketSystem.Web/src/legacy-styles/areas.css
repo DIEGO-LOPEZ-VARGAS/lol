@@ -1,0 +1,371 @@
+﻿main {
+    padding: 2rem 3rem;
+    background-color: #ffffff;
+}
+
+/* Contenedor del encabezado */
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    gap: 2rem;
+    padding-bottom: 1rem;
+}
+
+/* Título principal */
+.profile-title {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #000000;
+    margin: 0;
+    padding-left: 1rem;
+    border-left: 4px solid #fec526;
+    flex-shrink: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Contenedor del perfil */
+.profile-container {
+    max-width: 900px;
+    margin: 2rem auto;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(15, 29, 96, 0.1);
+    padding: 2rem;
+    border: 1px solid #e8e9ea;
+}
+
+/* Tarjetas de área */
+.card {
+    background-color: #b6b6b1;
+    border-radius: 8px;
+    box-shadow: 0 3px 8px rgba(15, 29, 96, 0.15);
+    transition: all 0.3s ease;
+    margin: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow: hidden;
+}
+
+    /* Contenedor de botones - asegura alineación perfecta */
+    .card .d-flex {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        margin-top: auto;
+    }
+
+    /* Contenedor de grupo de botones */
+    .card .btn-group {
+        display: flex;
+        justify-content: center;
+        gap: 10px; /* Espacio entre botones */
+        flex-wrap: nowrap;
+        align-items: center;
+        width: 100%;
+    }
+
+    .card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 6px 20px rgba(15, 29, 96, 0.25);
+    }
+
+/* Encabezado de tarjeta */
+.card-title {
+    color: #0f1d60 !important;
+    font-weight: 600;
+    font-size: 1.1rem;
+    padding-bottom: 0.5rem;
+}
+
+.card-text {
+    color: #801250;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+/* Estilos base para todos los botones en cards */
+.card .btn {
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    white-space: nowrap;
+    width: 40px !important;
+    height: 40px !important;
+    min-width: 40px !important;
+    min-height: 40px !important;
+    max-width: 40px !important;
+    max-height: 40px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    transition: all 0.2s ease;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+    vertical-align: middle;
+    line-height: 1;
+}
+
+    /* Asegurar que los iconos estén centrados */
+    .card .btn i {
+        font-size: 16px;
+        line-height: 1;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+/* Botón de editar */
+.btn-edit {
+    background-color: #fec526 !important;
+    border-color: #fec526 !important;
+    color: #0f1d60 !important;
+}
+
+    .btn-edit:hover {
+        background-color: #e5b123 !important;
+        border-color: #e5b123 !important;
+        color: #0f1d60 !important;
+        transform: scale(1.05);
+    }
+
+    .btn-edit i {
+        color: #ffff !important;
+    }
+
+/* Botón de eliminar */
+.btn-danger {
+    background-color: #801250 !important;
+    border-color: #801250 !important;
+    color: #ffffff !important;
+}
+
+    .btn-danger:hover {
+        background-color: #66103d !important;
+        border-color: #66103d !important;
+        color: #ffffff !important;
+        transform: scale(1.05);
+    }
+
+    .btn-danger i {
+        color: #ffffff !important;
+    }
+
+/* Botón principal de agregar */
+.btn-success {
+    background-color: #0f1d60 !important;
+    border-color: #0f1d60 !important;
+    color: #ffffff !important;
+    font-weight: 600;
+    padding: 10px 20px;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+
+.bi-plus {
+    color: #ffffff !important;
+    margin-right: 5px;
+}
+
+/* Estilos para modales */
+.modal-content {
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(15, 29, 96, 0.2);
+    border: 2px solid #801250;
+}
+
+/* Encabezado del modal */
+.modal-header {
+    background-color: #801250;
+    color: #ffffff;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    border-bottom: 2px solid #fec526;
+}
+
+    .modal-header .modal-title {
+        font-weight: 600;
+        font-size: 1.3rem;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .modal-header .btn-close {
+        background-color: #ffffff;
+        border-radius: 50%;
+        opacity: 0.8;
+    }
+
+        .modal-header .btn-close:hover {
+            opacity: 1;
+        }
+
+/* Cuerpo del modal */
+.modal-body {
+    background-color: #ffffff;
+    padding: 1.5rem;
+}
+
+    .modal-body .form-label {
+        color: #0f1d60;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+    }
+
+    .modal-body .form-control,
+    .modal-body .form-select {
+        border: 2px solid #e8e9ea;
+        border-radius: 6px;
+        padding: 0.75rem;
+        font-size: 1rem;
+        transition: border-color 0.2s ease;
+    }
+
+        .modal-body .form-control:focus,
+        .modal-body .form-select:focus {
+            border-color: #fec526;
+            box-shadow: 0 0 0 0.2rem rgba(254, 197, 38, 0.25);
+        }
+
+/* Pie del modal */
+.modal-footer {
+    border-top: 2px solid #e8e9ea;
+    justify-content: center !important;
+    gap: 15px;
+    padding: 1.5rem;
+    background-color: #f8f9fa;
+}
+
+    .modal-footer .btn-secondary {
+        background-color: #801250 !important;
+        border-color: #801250 !important;
+        color: #ffffff !important;
+        border-radius: 6px;
+        padding: 8px 20px;
+        font-weight: 500;
+        transition: all 0.2s ease;
+    }
+
+
+
+    .modal-footer .btn-primary {
+        background-color: #fec526 !important;
+        border-color: #fec526 !important;
+        color: #0f1d60 !important;
+        border-radius: 6px;
+        padding: 8px 20px;
+        font-weight: 600;
+        transition: all 0.2s ease;
+    }
+
+
+
+/* Contenedor principal */
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -10px;
+}
+
+/* Responsividad */
+.col-md-4 {
+    flex: 0 0 calc(25% - 20px);
+    max-width: calc(25% - 20px);
+    padding: 10px;
+}
+
+@media (max-width: 1200px) {
+    .col-md-4 {
+        flex: 0 0 calc(33.333% - 20px);
+        max-width: calc(33.333% - 20px);
+    }
+}
+
+@media (max-width: 992px) {
+    .col-md-4 {
+        flex: 0 0 calc(50% - 20px);
+        max-width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 576px) {
+    .col-md-4 {
+        flex: 0 0 calc(100% - 20px);
+        max-width: calc(100% - 20px);
+    }
+
+    .profile-title {
+        font-size: 1.5rem;
+    }
+
+    main {
+        padding: 1rem 1.5rem;
+    }
+}
+
+/* Cuerpo de la tarjeta */
+.card-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1.5rem;
+    background-color: #ffffff;
+}
+
+.col-sm-8 {
+    width: 100%;
+    max-width: 100%;
+    flex: 0 0 100%;
+}
+
+#areaList {
+    width: 100%;
+    margin: 0;
+}
+
+/* Espaciado adicional */
+.mb-3 {
+    margin-bottom: 1rem !important;
+}
+
+/* Efectos de transición mejorados */
+* {
+    transition: all 0.2s ease;
+}
+
+/* Estilos para iconos */
+.bi {
+    font-size: 1rem;
+}
+
+/* Mejoras de accesibilidad */
+.btn:focus,
+.form-control:focus,
+.form-select:focus {
+    outline: 2px solid #fec526;
+    outline-offset: 2px;
+}
+
+/* Estilo para el texto del área */
+.card-body h5 {
+    color: #0f1d60;
+    font-weight: 600;
+}
+
+.card-body p {
+    color: #801250;
+    font-weight: 500;
+}

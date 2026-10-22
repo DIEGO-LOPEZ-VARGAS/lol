@@ -1,0 +1,223 @@
+﻿:root {
+    /* Paleta profesional y elegante en tonos vino */
+    --form-bg: #f8fafc; /* Gris muy claro, limpio */
+    --white: #ffffff;
+    --gray-light: #9ca3af; /* Gris cálido para contraste */
+    --main-color: #7c2d42; /* Vino medio, elegante */
+    --main-color-dark: #5a1f32; /* Vino oscuro, profundo */
+}
+
+body {
+    background-image: url('/assets/Img/fondo.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* Logo en esquina superior derecha */
+.logo-img {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 100px;
+    height: auto;
+    z-index: 1000;
+    opacity: 0.9;
+    transition: opacity 0.3s ease;
+}
+
+    .logo-img:hover {
+        opacity: 1;
+    }
+
+.contenedor-formularios {
+    background: var(--form-bg);
+    padding: 30px;
+    max-width: 500px;
+    margin: 20px auto;
+    border-radius: 4px;
+    box-shadow: 0 4px 10px 4px rgba(124, 45, 66, 0.15); /* Sombra en tonos vino */
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+    /* Estilo personalizado para la barra de desplazamiento */
+    .contenedor-formularios::-webkit-scrollbar {
+        width: 10px;
+    }
+
+    .contenedor-formularios::-webkit-scrollbar-track {
+        background: var(--form-bg);
+        border-radius: 10px;
+    }
+
+    .contenedor-formularios::-webkit-scrollbar-thumb {
+        background-color: var(--main-color);
+        border-radius: 10px;
+        border: 2px solid var(--form-bg);
+    }
+
+        .contenedor-formularios::-webkit-scrollbar-thumb:hover {
+            background-color: var(--main-color-dark);
+        }
+
+.contenedor-tabs {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 30px 0;
+    display: flex;
+}
+
+    .contenedor-tabs li {
+        flex: 1;
+    }
+
+        .contenedor-tabs li a {
+            display: block;
+            text-decoration: none;
+            padding: 12px;
+            background: rgba(124, 45, 66, 0.1); /* Fondo en tonos vino */
+            color: var(--gray-light);
+            font-size: 18px;
+            text-align: center;
+            cursor: pointer;
+            transition: .3s ease;
+        }
+
+            .contenedor-tabs li a:hover {
+                background: var(--main-color-dark);
+                color: var(--white);
+            }
+
+    .contenedor-tabs .active a {
+        background: var(--main-color);
+        color: var(--white);
+    }
+
+h1 {
+    text-align: center;
+    color: var(--main-color);
+    font-weight: 300;
+    font-size: 24px;
+    margin: 0 0 30px;
+}
+
+.contenedor-input {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.form-input {
+    font-size: 16px;
+    display: block;
+    width: 100%;
+    max-width: 400px;
+    padding: 8px 10px;
+    background: none;
+    border: 1px solid var(--gray-light);
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    color: var(--main-color);
+    transition: all 0.3s ease;
+}
+
+    .form-input:focus {
+        outline: none;
+        border-color: var(--main-color-dark);
+    }
+
+label {
+    position: absolute;
+    transform: translateY(6px);
+    left: 13px;
+    color: var(--gray-light);
+    transition: all 0.25s ease;
+    pointer-events: none;
+    font-size: 16px;
+}
+
+    label.active {
+        transform: translateY(-20px);
+        left: 2px;
+        font-size: 14px;
+        color: var(--main-color);
+    }
+
+.button {
+    border: 0;
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 10px 0;
+    font-size: 1.2rem;
+    background: var(--main-color);
+    color: var(--white);
+    transition: all .3s ease;
+    width: 100%;
+    max-width: 500px;
+}
+
+.ajuste-titulo label {
+    transform: translateY(-8px);
+    position: relative;
+    transition: all 0.3s ease;
+    color: var(--main-color);
+}
+
+/* Keep field labels above the input; the old floating labels covered typed text. */
+.login-main .contenedor-input > label {
+    position: static;
+    display: block;
+    transform: none;
+    left: auto;
+    margin-bottom: 6px;
+    color: #465166;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.login-main .form-input {
+    box-sizing: border-box;
+    max-width: none;
+    min-height: 42px;
+    padding: 9px 11px;
+    border: 1px solid #cbd2df;
+    border-radius: 7px;
+    background: #fff;
+    color: #212529;
+    opacity: 1;
+}
+
+.login-main .form-input:focus {
+    border-color: var(--main-color);
+    box-shadow: 0 0 0 3px rgba(124, 45, 66, .12);
+}
+
+.login-main .form-input::placeholder {
+    color: #737d8c;
+    opacity: 1;
+}
+
+.button:hover {
+    background: var(--main-color-dark);
+}
+
+@media screen and (max-width: 500px) {
+    .contenedor-formularios {
+        margin: 10px;
+        padding: 20px;
+    }
+
+    .button {
+        font-size: 1rem;
+    }
+
+    .logo {
+        width: 60px;
+        height: 60px;
+        top: 15px;
+        right: 15px;
+    }
+}
